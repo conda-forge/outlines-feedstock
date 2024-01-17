@@ -27,7 +27,8 @@ requirements:
     - lark
     - nest-asyncio
     - numpy
-    - perscache
+    - cloudpickle
+    - diskcache
     - pydantic >=2.0
     - scipy
     - pytorch >=2.1
