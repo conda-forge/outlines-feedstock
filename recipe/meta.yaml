@@ -1,5 +1,5 @@
 {% set name = "outlines" %}
-{% set version = "0.0.24" %}
+{% set version = "0.0.25" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/outlines-{{ version }}.tar.gz
-  sha256: c1cc73f282448bc6ad66ec9844bc03b9fd46cee03afe1567bf4938278d1e96c0
+  sha256: 8f7dcb055a99ba945c86982eb3675c9816d67e5af221ff07b09379d557b91ed6
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - transformers ==4.36.2
     - python >=3.8
     - interegular
     - jinja2
