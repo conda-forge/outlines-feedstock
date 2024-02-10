@@ -1,5 +1,5 @@
 {% set name = "outlines" %}
-{% set version = "0.0.26" %}
+{% set version = "0.0.28" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/outlines-{{ version }}.tar.gz
-  sha256: 210d8027286cf9c88626b4052d601ff02e40900392e0c0ec889321e734188a5b
+  sha256: ea45c846a65920208eef47dc259116355c023ac53f04eb740be1fa09586df3d6
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
-    - transformers ==4.36.2
+    - transformers
     - python >=3.8
     - interegular
     - jinja2
@@ -32,7 +32,7 @@ requirements:
     - diskcache
     - pydantic >=2.0
     - scipy
-    - pytorch >=2.1
+    - pytorch >=2.1.0
     - numba
     - joblib
     - referencing
