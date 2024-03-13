@@ -1,5 +1,5 @@
 {% set name = "outlines" %}
-{% set version = "0.0.34" %}
+{% set version = "0.0.36" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/outlines-{{ version }}.tar.gz
-  sha256: 594e7204c770b47a62eb5c2ba7d25ea0ab2e16882b5f04556712a0228d3d3309
+  sha256: 3cffb43143548cd78c6061990feb461cffd5479999391b8390471ea839c2d46e
 
 build:
   noarch: python
