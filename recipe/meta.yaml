@@ -1,5 +1,5 @@
 {% set name = "outlines" %}
-{% set version = "0.0.41" %}
+{% set version = "0.0.43" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/outlines-{{ version }}.tar.gz
-  sha256: 6813db6813853fbe843b1f59c3e867e142c404542970189b071ad0cd1480e548
+  sha256: 4a24e853b1d50c61aee76cc45fffc5cf376c10c50caa3b28ebd21fcddc39d83f
 
 build:
   noarch: python
@@ -21,6 +21,10 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - datasets
+    - pyairports
+    - pycountry
+    - tqdm
     - transformers
     - python >=3.8
     - interegular
