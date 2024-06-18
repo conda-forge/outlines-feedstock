@@ -1,5 +1,5 @@
 {% set name = "outlines" %}
-{% set version = "0.0.44" %}
+{% set version = "0.0.45" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/outlines-{{ version }}.tar.gz
-  sha256: 18c0ea757745e91cafdf28d01361bd05f1466226fc604b92ddbf8efd402c00bf
+  sha256: ee7912d05b7c4bf44bf5e1bb6d239202bbb4653216f149ba3bcaa5995c97f6b3
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - typing-extensions
     - datasets
     - pyairports
     - pycountry
@@ -31,7 +32,7 @@ requirements:
     - jinja2
     - lark
     - nest-asyncio
-    - numpy
+    - numpy <2.0.0
     - cloudpickle
     - diskcache
     - pydantic >=2.0
