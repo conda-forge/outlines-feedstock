@@ -1,5 +1,5 @@
 {% set name = "outlines" %}
-{% set version = "0.0.46" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/outlines-{{ version }}.tar.gz
-  sha256: cd272418a268e0a25b7189180dfdcf9fe1b99f50ac1dfb9ffd83c896c5b3fa3c
+  sha256: b702ca8cb52c4b3621e3806f989925cc6aa165147e1ab201d70e914088493e1f
 
 build:
   noarch: python
@@ -21,6 +21,9 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - airportsdata
+    - outlines-core ==0.1.0
+    - typing_extensions
     - typing-extensions
     - datasets
     - pyairports
