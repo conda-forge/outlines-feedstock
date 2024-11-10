@@ -1,5 +1,5 @@
 {% set name = "outlines" %}
-{% set version = "0.0.46" %}
+{% set version = "0.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/outlines-{{ version }}.tar.gz
-  sha256: cd272418a268e0a25b7189180dfdcf9fe1b99f50ac1dfb9ffd83c896c5b3fa3c
+  sha256: 5a48ad00d3bdd8eccaa7574821eb5aaa27ab9f61fde9c3fba52f352dc00197e4
 
 build:
   noarch: python
@@ -21,6 +21,9 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - airportsdata
+    - outlines-core ==0.1.14
+    - typing_extensions
     - typing-extensions
     - datasets
     - pyairports
@@ -37,7 +40,7 @@ requirements:
     - diskcache
     - pydantic >=2.0
     - scipy
-    - pytorch >=2.1.0
+    - pytorch
     - numba
     - joblib
     - referencing
