@@ -12,6 +12,9 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/outlines-${{ version }}.tar.gz
   sha256: 43391e18665245eeb141b09cc53896fad610a6c587698577de196ba4758cc420
+  patches:
+    # remove unnecessary dependencies: pre-commit
+    - fix-dep.patch
 
 build:
   number: 0
