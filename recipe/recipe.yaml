@@ -1,0 +1,68 @@
+schema_version: 1
+
+context:
+  name: outlines
+  version: "0.2.1"
+  python_min: "3.10"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/outlines-${{ version }}.tar.gz
+  sha256: 43391e18665245eeb141b09cc53896fad610a6c587698577de196ba4758cc420
+  patches:
+    # remove unnecessary dependencies: pre-commit
+    - fix-dep.patch
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=45
+    - setuptools-scm >=6.2
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - interegular
+    - jinja2
+    - lark
+    - nest-asyncio
+    - numpy
+    - cloudpickle
+    - diskcache
+    - pydantic >=2.0
+    - referencing
+    - jsonschema
+    - requests
+    - tqdm
+    - typing_extensions
+    - iso3166
+    - airportsdata
+    - pytorch
+    - outlines-core ==0.1.26
+    - genson
+
+tests:
+  - python:
+      imports:
+        - outlines
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: Probabilistic Generative Model Programming
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/outlines-dev/outlines
+  documentation: https://outlines-dev.github.io/outlines
+
+extra:
+  recipe-maintainers:
+    - maresb
+    - pavelzw
+    - hadim
