@@ -3,6 +3,8 @@ schema_version: 1
 context:
   name: outlines
   version: "0.2.3"
+  # While pyproject.toml specifies 3.9, we actually need 3.10.
+  # https://github.com/dottxt-ai/outlines/issues/1442
   python_min: "3.10"
 
 package:
