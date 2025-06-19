@@ -32,20 +32,20 @@ requirements:
     - jinja2
     - lark
     - nest-asyncio
-    - numpy
     - cloudpickle
     - diskcache
     - pydantic >=2.0
     - referencing
     - jsonschema
     - requests
+    - pillow
     - tqdm
     - typing_extensions
     - iso3166
     - airportsdata
-    - pytorch
     - outlines-core ==0.1.26
     - genson
+    - pytorch
 
 tests:
   - python:
