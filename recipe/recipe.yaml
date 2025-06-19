@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: outlines
-  version: "0.2.3"
+  version: "1.0.0"
   # While pyproject.toml specifies 3.9, we actually need 3.10.
   # https://github.com/dottxt-ai/outlines/issues/1442
   python_min: "3.10"
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/outlines-${{ version }}.tar.gz
-  sha256: f6d1a10c5e7c4d80b8796c2867097084ed3ebd9467640945948ec3acddf3fee2
+  sha256: f19ee48a81e772104d544e30c0417437ce1404654d797cad6ec024a14ebca5d0
 
 build:
   number: 0
@@ -32,20 +32,20 @@ requirements:
     - jinja2
     - lark
     - nest-asyncio
-    - numpy
     - cloudpickle
     - diskcache
     - pydantic >=2.0
     - referencing
     - jsonschema
     - requests
+    - pillow
     - tqdm
     - typing_extensions
     - iso3166
     - airportsdata
-    - pytorch
     - outlines-core ==0.1.26
     - genson
+    - pytorch
 
 tests:
   - python:
