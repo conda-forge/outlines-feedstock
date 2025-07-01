@@ -46,6 +46,7 @@ requirements:
     - outlines-core ==0.1.26
     - genson
     - pytorch
+    - jsonpath-ng
 
 tests:
   - python:
