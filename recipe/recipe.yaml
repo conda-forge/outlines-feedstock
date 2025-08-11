@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: outlines
-  version: "1.2.2"
+  version: "1.2.3"
   # While pyproject.toml specifies 3.9, we actually need 3.10.
   # https://github.com/dottxt-ai/outlines/issues/1442
   python_min: "3.10"
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/outlines-${{ version }}.tar.gz
-  sha256: dda928c65edbd679f088596864904068ab08c816ecd698f67b9e56f2601d1549
+  sha256: cc8e756c35645834426126f7adabfa4331dedd0c7cfd6c147ae54181af0411cc
 
 build:
   number: 0
