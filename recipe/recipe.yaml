@@ -27,7 +27,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<3.13
     - jinja2
     - cloudpickle
     - diskcache
