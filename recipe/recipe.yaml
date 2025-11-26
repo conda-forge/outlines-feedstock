@@ -35,9 +35,9 @@ requirements:
     - jsonschema
     - pillow
     - typing_extensions
-    - genson
-    - jsonpath_ng
     - outlines_core ==0.2.11
+    - genson
+    - jsonpath-ng
 tests:
   - python:
       imports:
